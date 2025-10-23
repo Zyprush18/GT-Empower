@@ -49,6 +49,7 @@ Website ini dirancang dengan tampilan minimalis dan elemen visual yang mereprese
 
 ## 🧱 Struktur Proyek
 
+```bash
 GT-Empower/
 ├── assets/
 │ ├── css/
@@ -59,6 +60,7 @@ GT-Empower/
 ├── package.json
 ├── README.md
 └── tailwind.config.js
+```
 
 ## 🚀 Cara Menjalankan Proyek
 
