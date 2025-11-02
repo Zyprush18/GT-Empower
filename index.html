@@ -5,78 +5,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GreenTech Empower</title>
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/output.css" />
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
         rel="stylesheet" />
-    <script src="assets/js/app.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-800 dark:text-white min-h-screen">
-    <header class="fixed top-0 w-full z-50">
-        <nav class="flex p-3 mx-8 justify-between items-center">
+<body class="min-h-screen bg-gray-700">
+    <header id="navbar" class="fixed top-0 w-full text-white z-50 backdrop-blur-md">
+        <nav class="flex p-3 mx-8 justify-between items-center align-middle">
             <div class="flex">
-                <img src="assets/img/62dc313bebbc78f08ffd3076b6228377.webp" alt="logo"
-                    class="w-10 h-auto rounded-full mr-3" />
-                <a href="/" class="text-3xl"><span class="text-green-700">GT</span>Empower</a>
+                <img src="assets/img/logo.png" alt="logo" class="w-7 md:w-10 h-auto rounded-full mr-3" />
+                <a href="/" class="text-2xl md:text-3xl"><span class="text-green-600">GT</span>Empower</a>
             </div>
-            <ul class="flex ml-15">
+
+            <button id="menu-btn" class="block md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <ul class="hidden md:flex ml-15 tracking-widest">
                 <li class="mx-4">
-                    <a href="#home" class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg">Home</a>
+                    <a href="#home"
+                        class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg hover:text-black">Home</a>
                 </li>
                 <li class="mx-4">
-                    <a href="#about" class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg">About</a>
+                    <a href="#about"
+                        class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg hover:text-black">About</a>
                 </li>
                 <li class="mx-4">
-                    <a href="#focus" class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg">Focus</a>
+                    <a href="#focus"
+                        class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg hover:text-black">Focus</a>
                 </li>
                 <li class="mx-4">
-                    <a href="/" class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg">Contact</a>
+                    <a href="/" class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg hover:text-black">Contact</a>
                 </li>
             </ul>
         </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-400 text-whit shadow-lg">
+            <ul class="flex flex-col p-4 space-y-3 text-center">
+                <li>
+                    <a href="#home" class="block py-2 hover:bg-green-100 hover:text-black rounded-lg">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="block py-2 hover:bg-green-100 hover:text-black rounded-lg">About</a>
+                </li>
+                <li>
+                    <a href="#focus" class="block py-2 hover:bg-green-100 hover:text-black rounded-lg">Focus</a>
+                </li>
+                <li>
+                    <a href="#contact" class="block py-2 hover:bg-green-100 hover:text-black rounded-lg">Contact</a>
+                </li>
+            </ul>
+        </div>
     </header>
+
     <main class="font-nunito min-h-screen">
-        <div id="particles-js" class="absolute inset-0 -z-15"></div>
-        <section id="home" class="relative mx-4">
-            <div class="flex flex-col justify-center items-center text-center h-screen">
-                <h1 class="text-[30px] md:text-[90px] text-green-700">
+        <section id="home" class="relative bg-gray-700  min-h-screen overflow-hidden">
+
+            <div id="particles-js" class="absolute inset-0 blur-xs"></div>
+
+            <div class="flex flex-col justify-center items-center text-center h-screen px-4 sm:px-8 md:px-12">
+                <h1 class="text-[26px] sm:text-[40px] md:text-[90px] font-bold text-green-600 leading-tight mb-5">
                     Innovation Beyond Limits
                 </h1>
-                <h1 class="text-[15px] mt-2 md:text-[40px] text-gray-400 md:mt-[-25px]">
+                <h1 class="text-[14px] sm:text-[20px] md:text-[40px] text-gray-400 mt-2 md:mt-[-25px] leading-snug">
                     Empowering People, Sustaining the Planet <br />
                     through Technology
                 </h1>
-                <p class="text-[12px] md:text-sm mt-3">
-                    Together, we explore how technology can empower communities and
-                    protect the Earth.<br />Let’s create innovation that moves the world
-                    — not just forward, but better.
+                <p
+                    class="text-[12px] sm:text-[14px] md:text-sm mt-3 text-white leading-relaxed max-w-[90%] sm:max-w-[600px]">
+                    Together, we explore how technology can empower communities and protect the Earth.<br />
+                    Let’s create innovation that moves the world — not just forward, but better.
                 </p>
                 <button
-                    class="bg-green-600 hover:bg-green-700 w-[100px] h-11 md:w-[180px] md:h-13 rounded-xl md:shadow-xl text-white mt-10">
+                    class="bg-green-600 hover:bg-green-700 w-[110px] sm:w-[140px] md:w-[180px] h-10 sm:h-11 md:h-13 rounded-xl md:shadow-xl text-white mt-10 z-10 text-sm sm:text-base">
                     Learn More
                 </button>
             </div>
 
-            <div class="absolute -z-10 top-120 -left-40">
-                <img src="assets/img/bumi.png" class="opacity-85" />
+            <div class="absolute z-1 top-120 -left-40">
+                <img src="assets/img/bumi.png" class="opacity-40 md:opacity-70" />
             </div>
-            <div class="absolute -z-35 top-113 -left-44">
-                <img src="assets/img/bumi-tech.png" class="opacity-80" />
+            <div class="absolute top-113 -left-44">
+                <img src="assets/img/bumi-tech.png" class="opacity-15 md:opacity-30" />
             </div>
         </section>
 
-        <section id="about" class="mt-5 mx-40 my-25">
-            <div class="items-center flex justify-center my-8">
+        <section id="about" class="px-10 md:px-24 py-16 bg-gray-600 relative z-10">
+            <div class="flex justify-center mb-8">
                 <button
-                    class="w-35 h-13 outline-1 outline-gray-300 bg-gray-50 shadow-md items-center rounded-4xl mt-4 text-black font-bold">
+                    class="px-8 py-3 bg-gray-50 shadow-md rounded-full text-black font-semibold flex items-center gap-2 hover:bg-white/80 transition">
                     🌿 About
                 </button>
             </div>
 
-            <p class="text-center">
+            <p class="text-center text-gray-100 text-base md:text-lg max-w-4xl mx-auto leading-relaxed">
                 GreenTech Empower is a digital platform dedicated to inspiring and
                 educating people about the power of information technology in creating
                 a sustainable future. We believe that innovation should not only
@@ -85,66 +114,130 @@
                 responsibility — for both people and the Earth.
             </p>
 
-            <div class="flex mt-15">
-                <div class="bg-white w-[45%] rounded-sm h-[620px] mr-5"></div>
+            <div class="grid md:grid-cols-2 gap-10 mt-16">
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <h3 class="text-green-400 font-semibold text-2xl mb-3">
+                        Our Vision
+                    </h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        To create a world where technology not only advances human life,
+                        but also restores balance to nature — promoting harmony between
+                        digital innovation and environmental care.
+                    </p>
+                </div>
 
-                <div class="flex flex-col w-[55%] space-y-5">
-                    <div class="flex space-x-4">
-                        <div class="bg-white w-[50%] rounded-sm h-[300px]"></div>
-                        <div class="bg-white w-[50%] rounded-sm h-[300px]"></div>
-                    </div>
-                    <div class="bg-white rounded-sm h-[300px]"></div>
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <h3 class="text-green-400 font-semibold text-2xl mb-3">
+                        Our Mission
+                    </h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        To educate, inspire, and collaborate with communities in
+                        developing eco-friendly digital solutions — from energy-efficient
+                        systems to green software development.
+                    </p>
                 </div>
             </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <h4 class="text-green-400 font-semibold text-xl mb-2">
+                        Innovation
+                    </h4>
+                    <p class="text-gray-300 text-base">
+                        We use technology as a tool to create smarter, cleaner, and more
+                        efficient solutions.
+                    </p>
+                </div>
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <h4 class="text-green-400 font-semibold text-xl mb-2">
+                        Sustainability
+                    </h4>
+                    <p class="text-gray-300 text-base">
+                        Every innovation is guided by environmental awareness and
+                        long-term responsibility.
+                    </p>
+                </div>
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <h4 class="text-green-400 font-semibold text-xl mb-2">
+                        Empowerment
+                    </h4>
+                    <p class="text-gray-300 text-base">
+                        We empower people through knowledge, collaboration, and technology
+                        access for all.
+                    </p>
+                </div>
+            </div>
+
+            <p class="mt-16 text-gray-400 text-base italic text-center max-w-2xl mx-auto">
+                “At GreenTech Empower, we believe that the future of technology is
+                green — and together, we can build it.”
+            </p>
         </section>
 
-        <section id="focus" class="mt-5 mx-40 my-25">
-            <div class="items-center flex justify-center my-8">
+        <section id="focus" class="px-10 md:px-24 py-20 bg-gray-700 relative">
+            <div class="relative z-10 flex flex-col items-center mb-10">
                 <button
-                    class="w-35 h-13 outline-1 outline-gray-300 bg-gray-50 shadow-md items-center rounded-4xl mt-4 text-black font-bold">
+                    class="px-8 py-3 bg-gray-50 shadow-md rounded-full text-black font-semibold flex items-center gap-2 hover:bg-white/80 transition">
                     🌱 Our Focus
                 </button>
+
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto text-center italic mt-5">
+                    We build technology that respects nature, enhances life, and inspires a sustainable tomorrow.
+                </p>
             </div>
-            <p class="text-center">
-                Three pillars that drive our vision for a sustainable digital future.
+
+            <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-600/30 p-3 rounded-full shadow-inner">
+                            🌿
+                        </div>
+                        <h3 class="text-white font-semibold text-xl ml-3">Green Innovation</h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Developing eco-friendly digital ideas that reduce environmental impact and encourage sustainable
+                        living.
+                    </p>
+                </div>
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-600/20 p-3 rounded-full">💡</div>
+                        <h3 class="text-white font-semibold text-xl ml-3">
+                            Digital Empowerment
+                        </h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Making technology accessible to everyone, enabling people to
+                        learn, connect, and grow through digital empowerment.
+                    </p>
+                </div>
+                <div
+                    class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-600/20 p-3 rounded-full">🚀</div>
+                        <h3 class="text-white font-semibold text-xl ml-3">
+                            Smart Future
+                        </h3>
+                    </div>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Exploring new technologies like AI and IoT to create smarter,
+                        greener, and more efficient solutions for tomorrow.
+                    </p>
+                </div>
+            </div>
+            <p class="text-center text-gray-300 mt-4 text-lg italic">
+                “Empowering change through innovation, sustainability, and human connection.”
             </p>
-
-            <div class="flex mt-15">
-                <div class="shadow-md w-[60%] rounded-sm h-[620px] mr-5 px-8">
-                    <button
-                        class="w-15 h-13 outline-1 outline-gray-300 bg-green-50 shadow-md items-center rounded-4xl mt-4 text-xl">
-                        🍀
-                    </button>
-                    <h3 class="mt-3 text-3xl font-bold">Green Innovation</h3>
-                    <p>Developing eco-friendly digital ideas that reduce environmental impact and encourage sustainable
-                        living.</p>
-                </div>
-                <div class="flex flex-col w-[40%] space-y-5">
-                    <div class="shadow-md rounded-sm h-[300px] px-8">
-                        <button
-                            class="w-15 h-13 outline-1 outline-gray-300 bg-green-50 shadow-md items-center rounded-4xl mt-4 text-xl">
-                            🤝
-                        </button>
-                        <h3 class="mt-3 text-3xl font-bold">Green Innovation</h3>
-                        <p>Making technology accessible to everyone, enabling people to learn, connect, and grow through
-                            digital empowerment.</p>
-
-                    </div>
-                    <div class="shadow-md rounded-sm h-[300px] px-8">
-                        <button
-                            class="w-15 h-13 outline-1 outline-gray-300 bg-green-50 shadow-md items-center rounded-4xl mt-4 text-xl">
-                            🚀
-                        </button>
-                        <h3 class="mt-3 text-3xl font-bold">Smart Future</h3>
-                        <p>Exploring new technologies like AI and IoT to create smarter, greener, and more efficient
-                            solutions for tomorrow.</p>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
-        <section id="contact" class="mt-5 mx-40 my-25">
+        <section id="contact" class="px-35 py-8 bg-gray-600">
             <div class="items-center flex justify-center my-8">
                 <button
                     class="w-35 h-13 outline-1 outline-gray-300 bg-gray-50 shadow-md items-center rounded-4xl mt-4 text-black font-bold">
@@ -152,91 +245,40 @@
                 </button>
             </div>
 
-            <!-- <h3 class="text-center text-lg mt-5">Join the Movement</h3>
-            <p class="text-center"> We’re on a mission to inspire innovation that goes beyond limits.<br>Whether you’re
-                a student, creator, or dreamer — your ideas can make a difference.</p>
-            <div class="flex flex-col justify-center items-center">
-                <button
-                    class="bg-green-600 hover:bg-green-700 w-[100px] h-11 md:w-[180px] md:h-10 rounded-xl md:shadow-xl text-white mt-10">
-                    Get Started
-                </button>
-            </div> -->
+            <div
+                class="mx-auto max-w-lg md:max-w-3xl bg-gray-900/80 text-white shadow-md shadow-green-300 rounded-2xl p-10 min-h-[600px] flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-semibold mt-6 text-center md:text-left">
+                        Join the Movement
+                    </h3>
+                    <p class="mt-2 text-gray-300 text-center md:text-left text-base md:text-lg leading-relaxed">
+                        We’re on a mission to inspire innovation that goes beyond limits.<br />
+                        Whether you’re a student, creator, or dreamer — your ideas can make
+                        a difference.
+                    </p>
+                </div>
 
-            <div class="mx-auto max-w-3xl bg-white shadow-md rounded-2xl p-10">
-                <h3 class="text-2xl font-semibold mt-6">Join the Movement</h3>
-                <p class="text-gray-600 mt-2">
-                    We’re on a mission to inspire innovation that goes beyond limits.<br>
-                    Whether you’re a student, creator, or dreamer — your ideas can make a difference.
-                </p>
-
-
-                <form class="mt-10 space-y-5">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Name</label>
-                        <input type="text" placeholder="Your name or Your name community"
-                            class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" />
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" placeholder="your@email.com"
-                            class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" />
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Message</label>
-                        <textarea placeholder="Write your message..."
-                            class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 h-28"></textarea>
-                    </div>
-
-                    <div class="flex justify-center">
-                        <button type="submit"
-                            class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-xl shadow-md transition">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
+                <div class="flex justify-center mt-10">
+                    <button
+                        class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-xl shadow-md transition transform hover:scale-105">
+                        Join Now 🌍
+                    </button>
+                </div>
             </div>
-
 
         </section>
 
-
-
-
-        <footer class="bg-gray-50 py-6 mt-10 border-t border-gray-200">
-            <!-- <div class="flex justify-center space-x-8 text-gray-700 mb-4">
-      
-        <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-5 h-5 text-green-600">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75l-9 5.25-9-5.25" />
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M3.75 6.75v10.5l9 5.25 9-5.25V6.75" />
-            </svg>
-            <span>contact@gtempower.com</span>
-        </div>
-
-        <div class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-5 h-5 text-green-600">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M2.25 3.75 6 3a1.5 1.5 0 0 1 1.5 1.5v2.25a.75.75 0 0 1-.75.75H5.25a.75.75 0 0 0-.75.75v2.25c0 4.97 4.03 9 9 9h2.25a.75.75 0 0 0 .75-.75V17.25a.75.75 0 0 1 .75-.75H20.25a1.5 1.5 0 0 1 1.5 1.5l.75 3.75A.75.75 0 0 1 21.75 23.25C12.955 23.25 2.25 12.545 2.25 3.75z" />
-            </svg>
-            <span>+62 812 3456 7890</span>
-        </div>
-    </div> -->
-
-
-            <div class="text-center text-gray-500 text-sm">
-                © 2025 <span class="font-semibold text-green-700">GreenTech Empower</span> — Innovation for People and
-                Planet.
+        <footer class="bg-gray-700 py-6 border-t border-gray-200">
+            <div class="text-center text-white text-sm">
+                © 2025
+                <span class="font-semibold text-green-600">GreenTech Empower</span> —
+                Innovation for People and Planet.
             </div>
         </footer>
-
     </main>
 
     <script src="assets/js/app.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 </body>
 
 </html>
