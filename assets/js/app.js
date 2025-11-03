@@ -14,7 +14,12 @@ window.addEventListener("scroll", () => {
   lastScrollY = currentScrollY;
 });
 
-
+AOS.init({
+    offset: 0,             // jarak sebelum animasi muncul
+    mirror: false, 
+    duration: 800,           // durasi animasi
+    easing: 'ease-in-out',   // transisi halus
+});
 
 
 particlesJS("particles-js", {

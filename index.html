@@ -11,9 +11,12 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
         rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 </head>
 
-<body class="min-h-screen bg-gray-700">
+<body class="min-h-screen bg-gray-700 overflow-x-hidden" data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
     <header id="navbar" class="fixed top-0 w-full text-white z-50 backdrop-blur-md">
         <nav class="flex p-3 mx-8 justify-between items-center align-middle">
             <div class="flex">
@@ -42,7 +45,7 @@
                         class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg hover:text-black">Focus</a>
                 </li>
                 <li class="mx-4">
-                    <a href="/" class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg hover:text-black">Contact</a>
+                    <a href="#contact" class="block px-4 py-3 hover:bg-green-200 hover:rounded-lg hover:text-black">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -71,41 +74,41 @@
             <div id="particles-js" class="absolute inset-0 blur-xs"></div>
 
             <div class="flex flex-col justify-center items-center text-center h-screen px-4 sm:px-8 md:px-12">
-                <h1 class="text-[26px] sm:text-[40px] md:text-[90px] font-bold text-green-600 leading-tight mb-5">
+                <h1 class="text-[26px] sm:text-[40px] md:text-[90px] font-bold text-green-600 leading-tight md:mb-5"  data-aos="zoom-in">
                     Innovation Beyond Limits
                 </h1>
-                <h1 class="text-[14px] sm:text-[20px] md:text-[40px] text-gray-400 mt-2 md:mt-[-25px] leading-snug">
+                <h1 class="text-[14px] sm:text-[20px] md:text-[40px] text-gray-400 mt-2 md:mt-[-25px] leading-snug"  data-aos="fade-left">
                     Empowering People, Sustaining the Planet <br />
                     through Technology
                 </h1>
                 <p
-                    class="text-[12px] sm:text-[14px] md:text-sm mt-3 text-white leading-relaxed max-w-[90%] sm:max-w-[600px]">
+                    class="text-[12px] sm:text-[14px] md:text-sm mt-3 text-white leading-relaxed max-w-[90%] sm:max-w-[600px]"  data-aos="fade-right">
                     Together, we explore how technology can empower communities and protect the Earth.<br />
                     Let’s create innovation that moves the world — not just forward, but better.
                 </p>
                 <button
-                    class="bg-green-600 hover:bg-green-700 w-[110px] sm:w-[140px] md:w-[180px] h-10 sm:h-11 md:h-13 rounded-xl md:shadow-xl text-white mt-10 z-10 text-sm sm:text-base">
+                    data-aos="fade-up" class="bg-green-600 hover:bg-green-700 w-[110px] sm:w-[140px] md:w-[180px] h-10 sm:h-11 md:h-13 rounded-xl md:shadow-xl text-white mt-10 z-10 text-sm sm:text-base">
                     Learn More
                 </button>
             </div>
 
-            <div class="absolute z-1 top-120 -left-40">
+            <div class="absolute z-1 top-120 -left-40" data-aos="fade-up">
                 <img src="assets/img/bumi.png" class="opacity-40 md:opacity-70" />
             </div>
-            <div class="absolute top-113 -left-44">
+            <div class="absolute top-113 -left-44" data-aos="fade-up">
                 <img src="assets/img/bumi-tech.png" class="opacity-15 md:opacity-30" />
             </div>
         </section>
 
         <section id="about" class="px-10 md:px-24 py-16 bg-gray-600 relative z-10">
-            <div class="flex justify-center mb-8">
+            <div class="flex justify-center mb-8" data-aos="zoom-in-up">
                 <button
                     class="px-8 py-3 bg-gray-50 shadow-md rounded-full text-black font-semibold flex items-center gap-2 hover:bg-white/80 transition">
                     🌿 About
                 </button>
             </div>
 
-            <p class="text-center text-gray-100 text-base md:text-lg max-w-4xl mx-auto leading-relaxed">
+            <p class="text-center text-gray-100 text-base md:text-lg max-w-4xl mx-auto leading-relaxed" data-aos="fade-down">
                 GreenTech Empower is a digital platform dedicated to inspiring and
                 educating people about the power of information technology in creating
                 a sustainable future. We believe that innovation should not only
@@ -115,7 +118,7 @@
             </p>
 
             <div class="grid md:grid-cols-2 gap-10 mt-16">
-                <div
+                <div  data-aos="fade-up-right"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <h3 class="text-green-400 font-semibold text-2xl mb-3">
                         Our Vision
@@ -127,7 +130,7 @@
                     </p>
                 </div>
 
-                <div
+                <div data-aos="fade-up-left"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <h3 class="text-green-400 font-semibold text-2xl mb-3">
                         Our Mission
@@ -140,8 +143,8 @@
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 mt-16">
-                <div
+            <div class="grid md:grid-cols-3 gap-8 mt-16" >
+                <div data-aos="fade-up-right"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <h4 class="text-green-400 font-semibold text-xl mb-2">
                         Innovation
@@ -151,7 +154,7 @@
                         efficient solutions.
                     </p>
                 </div>
-                <div
+                <div  data-aos="zoom-in-up"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <h4 class="text-green-400 font-semibold text-xl mb-2">
                         Sustainability
@@ -161,7 +164,7 @@
                         long-term responsibility.
                     </p>
                 </div>
-                <div
+                <div data-aos="fade-up-left"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <h4 class="text-green-400 font-semibold text-xl mb-2">
                         Empowerment
@@ -173,26 +176,26 @@
                 </div>
             </div>
 
-            <p class="mt-16 text-gray-400 text-base italic text-center max-w-2xl mx-auto">
+            <p class="mt-16 text-gray-400 text-base italic text-center max-w-2xl mx-auto" data-aos="zoom-in">
                 “At GreenTech Empower, we believe that the future of technology is
                 green — and together, we can build it.”
             </p>
         </section>
 
         <section id="focus" class="px-10 md:px-24 py-20 bg-gray-700 relative">
-            <div class="relative z-10 flex flex-col items-center mb-10">
-                <button
+            <div class="relative z-10 flex flex-col items-center mb-10" >
+                <button data-aos="zoom-in-up"
                     class="px-8 py-3 bg-gray-50 shadow-md rounded-full text-black font-semibold flex items-center gap-2 hover:bg-white/80 transition">
                     🌱 Our Focus
                 </button>
 
-                <p class="text-gray-300 text-lg max-w-2xl mx-auto text-center italic mt-5">
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto text-center italic mt-5" data-aos="fade-down">
                     We build technology that respects nature, enhances life, and inspires a sustainable tomorrow.
                 </p>
             </div>
 
             <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-                <div
+                <div data-aos="fade-up-right"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <div class="flex items-center mb-4">
                         <div class="bg-green-600/30 p-3 rounded-full shadow-inner">
@@ -205,7 +208,7 @@
                         living.
                     </p>
                 </div>
-                <div
+                <div data-aos="zoom-in-up"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <div class="flex items-center mb-4">
                         <div class="bg-yellow-600/20 p-3 rounded-full">💡</div>
@@ -218,7 +221,7 @@
                         learn, connect, and grow through digital empowerment.
                     </p>
                 </div>
-                <div
+                <div data-aos="fade-up-left"
                     class="bg-gray-900/80 rounded-3xl p-8 shadow-lg hover:shadow-green-500/40 hover:-translate-y-2 transition duration-500">
                     <div class="flex items-center mb-4">
                         <div class="bg-red-600/20 p-3 rounded-full">🚀</div>
@@ -232,13 +235,13 @@
                     </p>
                 </div>
             </div>
-            <p class="text-center text-gray-300 mt-4 text-lg italic">
+            <p class="mt-16 text-gray-400 text-base italic text-center max-w-2xl mx-auto" data-aos="zoom-in">
                 “Empowering change through innovation, sustainability, and human connection.”
             </p>
         </section>
 
-        <section id="contact" class="px-6 md:px-20 py-16 bg-gray-600">
-            <div class="flex justify-center mb-10">
+        <section id="contact" class="px-6 md:px-20 py-16 bg-gray-600" data-aos="fade-up">
+            <div class="flex justify-center mb-10" data-aos="zoom-in-up">
                 <button
                     class="px-8 py-3 bg-gray-100 text-black font-bold rounded-full shadow-md border border-gray-300 hover:bg-gray-200 transition">
                     💬 Contact
@@ -246,7 +249,7 @@
             </div>
 
             <div
-                class="mx-auto max-w-3xl text-white bg-gray-900/80 rounded-2xl p-10 shadow-lg flex flex-col justify-between">
+                class="mx-auto max-w-3xl text-white bg-gray-900/80 rounded-2xl p-10 shadow-lg flex flex-col justify-between" >
 
                 <div>
                     <h3 class="text-3xl font-semibold text-center md:text-left">
@@ -258,7 +261,7 @@
                     </p>
                 </div>
 
-                <div class="flex justify-center md:justify-start mt-10">
+                <div class="flex justify-center  mt-10" >
                     <button
                         class="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-xl shadow-md transition transform hover:scale-105">
                         Join Now 🌍
@@ -271,7 +274,7 @@
         <footer class="bg-gray-700 py-6 border-t border-gray-200">
             <div class="text-center text-white text-sm">
                 © 2025
-                <span class="font-semibold text-green-600">GreenTech Empower</span> —
+                <span class="font-semibold text-green-600">Syntax Error</span> —
                 Innovation for People and Planet.
             </div>
         </footer>
