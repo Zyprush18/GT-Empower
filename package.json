@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
